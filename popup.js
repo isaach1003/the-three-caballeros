@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
-
+//test
 document.getElementById('save').addEventListener('click', (event) => {
   event.preventDefault(); // Prevent form submission
   const budget = document.getElementById('budget').value;
