@@ -1,0 +1,27 @@
+body {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.piechart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+      pink 70deg,
+      lightblue 0 235deg,
+      orange 0
+    );
+  }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: block;
+    align-items: start;
+}
