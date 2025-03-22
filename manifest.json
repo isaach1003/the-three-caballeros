@@ -3,7 +3,33 @@
     "description": "Base Level Extension",
     "version": "1.0",
     "manifest_version": 3,
+    "permissions": [
+        "webRequest",
+        "unlimitedStorage",
+        "storage",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            "match_about_blank": false,
+            "all_frames": false,
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ],
+    "background": {
+    "service_worker": "background.js"
+   },
+
     "action": {
-      "default_popup": "website.html"
-    }
-  }
+      "default_popup": "website.html",
+      "default_icon":  "smilingchibidollar.png"
+    }   
+
+}

@@ -1,7 +1,15 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Are you SUUUUUREEEE you need this???</h1>
-    <button>Yes</button>
-    <button>No</button>
-  </body>
+<head>
+    <title>Budget Tracker</title>
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <h1>Your Monthly Budget: <span id="displayBudget">Not set</span></h1>
+    <h2>Set monthly budget</h2>
+    <textarea id="budget" name="budget" rows="1" placeholder="Ex: 100"></textarea>
+    <br>
+    <input type="button" id="save" value="Submit">
+    <p id="message"></p>
+</body>
 </html>
