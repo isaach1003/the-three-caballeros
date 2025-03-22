@@ -1,27 +1,13 @@
-body {
-    display: block;
-    width: auto;
-    height: auto;
+head{
+  background-color: darkolivegreen;
+  text-align: center;
 }
-
-.piechart {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: conic-gradient(
-      pink 70deg,
-      lightblue 0 235deg,
-      orange 0
-    );
-  }
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+background-color: #adf0ad;
+font-family: 'Mono Space', Times, serif;
+text-align: left;
+padding: 20px;
 }
-
-h1 {
-    display: block;
-    align-items: start;
+textArea{
+width: 200px;
 }
