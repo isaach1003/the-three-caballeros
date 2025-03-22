@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Display the current budget when the popup loads
   getBudget((budget) => {
       const display = document.getElementById('displayBudget');
       if (budget) {
@@ -11,24 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //test
 document.getElementById('save').addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent form submission
-  const budget = document.getElementById('budget').value;
+  event.preventDefault();
+  let budget = document.getElementById('budget').value.match(/0*(\d+)/)?.[1] || '0'; //should ignore leading 0s and symbols and return 0 if nothing is detected
   saveBudget(budget);
   document.getElementById('message').innerText = 'Budget saved!';
   document.getElementById('displayBudget').innerText = `$${budget}`;
+  
 });
 
 
 function saveBudget(amount) {
   //amount = (\d*);
   chrome.storage.local.set({ budget: amount }, () => {
-      console.log(`Budget set to $${amount}`);
+      //console.log(`Budget set to $${amount}`);
   });
 }
 
 function getBudget(callback) {
   chrome.storage.local.get(['budget'], (result) => {
-      console.log('Budget:', result.budget);
+      //console.log('Budget:', result.budget);
       callback(result.budget);
   });
 }
