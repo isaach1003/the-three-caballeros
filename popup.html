@@ -15,15 +15,13 @@
   <img src="smilingchibidollar.png" alt="logo" width="30" height="30">
 </header>
 <body>
-    <h1 class="Question">What type of purchase is this?</h1>
-    <h2>Budget: <span id="budgetDisplay">---</span></h2>
+    <h2 class="Question">This purchase is <span id="budgetPercent">x%</span> of your budget and <span id="remainingPercent">x%</span> of your remaining budget for the month!</h2>
+    <h3>Do you wish to Proceed?</h3>
+    <h3>Budget: <span id="budgetDisplay">---</span></h3>
+    <h3>Remaining Budget: <span id="remainingDisplay">---</span></h3>
     <h2>Total Price: <span id="totalDisplay">---</span></h2>
-    <div>
-        <button id="need">Need</button>
-        <button id="want">Want</button>
-        <button id="fun">Fun</button>
-    </div>
-    <p>This is a message to the user.</p>
-    <button id="close-popup">Close</button>
+    <button id="wrongPrice" value="wrongPrice">Wrong Price</button>
+    <button id="confirm" value="confirm">Confirm</button>
+    
 </body>
 </html>
