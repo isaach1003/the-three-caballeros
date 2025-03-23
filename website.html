@@ -2,18 +2,19 @@
 <html>
 <head>
     <title>Budget Tracker</title>
-    <script src="popup.js" defer></script>
+    <script src="popup.js" type="module" defer></script>
     <link rel="stylesheet" href="config.css">
+    
 </head>
 <header>
     <img src="smilingchibidollar.png" alt="logo" width="30" height="30">
 </header>
 <body>
-    <h1>Your Monthly Budget: <span id="displayBudget">Not set</span></h1>
-    <h2>Set monthly budget</h2>
+    <h2>Your Monthly Budget: <span id="displayBudget">should not be seen</span></h2>
+    <h3>Set monthly budget</h3>
     <textarea id="budget" name="budget" rows="1" placeholder="Ex: 100"></textarea>
     <br>
-    <input type="button" id="save" value="Submit">
-    <p id="message"></p>
+    <input class="money" type="button" id="save" value="Submit">  
+    <p id="message"></p>    
 </body>
 </html>

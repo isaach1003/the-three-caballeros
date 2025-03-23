@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Checkout Popup</title>
-  </head>
-  <body>
+    <script src="content.js" type="module" defer></script>
+</head>
+<body>
     <h1 class="Question">What type of purchase is this?</h1>
+    <h2>Budget: <span id="budgetDisplay">---</span></h2>
+    <h2>Total Price: <span id="totalDisplay">---</span></h2>
     <div>
-      <div class="buttons">
         <button id="need">Need</button>
-      </div>
-      <div class="buttons">
         <button id="want">Want</button>
-      </div>
-      <div class="buttons">
         <button id="fun">Fun</button>
-      </div>
     </div>
     <p>This is a message to the user.</p>
     <button id="close-popup">Close</button>
-    <script src="popup.js"></script>
-  </body>
+</body>
 </html>

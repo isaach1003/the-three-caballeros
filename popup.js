@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   getBudget((budget) => {
       const display = document.getElementById('displayBudget');
-      if (budget) {
-          display.innerText = `$${budget}`;
-      } else {
-          display.innerText = 'Not set';
-      }
+      display.innerText = budget ? `$${budget}` : '---';
   });
 });
-//test
+//test  
 document.getElementById('budget').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     getInput();
@@ -36,4 +32,22 @@ function getBudget(callback) {
       callback(result.budget);
   });
 }
+const totalPattern = /total\s*\$\s?(\d{1,3}(?:,\d{3})*(?:\.\d{2})?|\d+)/ig;
 
+function spendature() {
+  const element = Array.from(document.querySelectorAll("body *")).find(el => 
+      el.innerText && el.innerText.toLowerCase().includes("total ")
+  );
+
+  if (element) {
+      const match = element.innerText.match(/total\s*\$\s?(\d{1,3}(?:,\d{3})*(?:\.\d{2})?|\d+)/i);
+      if (match) {
+          const price = match[0];
+          console.log(`Found total price: ${price}`);
+          return price;
+      }
+  }
+
+  console.log("Total price not found.");
+  return null;
+}

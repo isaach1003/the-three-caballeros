@@ -1,12 +1,31 @@
+
 header{
   text-align: center;
 }
 body{
-background-color: #adf0ad;
-font-family: 'Mono Space', Times, serif;
+  height: 200px;
+  width: 200px;
+border: #74bf6d;
+border-style: dashed;
+background-color: #aedc9c ;
+font-family: 'Monaco', monospace;
+color: #2f6e2c;
 text-align: left;
-padding: 20px;
+padding: 10px;
 }
+.money{
+  align-items: center;
+  background-color: #d6e7d4;
+  border: #74bf6d;
+  color:#2f6e2c;
+  border-style: dashed;
+  cursor: pointer;
+}
+
 textArea{
-width: 200px;
+width: 100px;
+background-color: #d6e7d4;
+border: #74bf6d;
+color:#2f6e2c;
+border-style: dashed;
 }
