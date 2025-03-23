@@ -2,14 +2,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "showPopup") {
         chrome.action.openPopup();
     }
-
     if (request.action === "changePopup") {
         chrome.action.setPopup({ popup: "popup.html" });
     }
-    if (request.action === "simpleTest") {
-        sendResponse({ result: "Success" }); 
+    if (request.action === "resetPopup") {
+        chrome.action.setPopup({ popup: "home.html" });
     }
-
     if (request.action === "getTotalPrice") {
         chrome.scripting.executeScript(
             { 

@@ -3,6 +3,7 @@ header{
   text-align: center;
 }
 body{
+height:fit-content;
 border: #74bf6d;
 border-style: dashed;
 background-color: #aedc9c ;

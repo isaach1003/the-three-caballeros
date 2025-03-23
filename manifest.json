@@ -18,7 +18,7 @@
     "content_scripts": [
         {
             "js": [
-                "content.js"
+                "popup.js"
             ],
             "run_at": "document_end",
             "match_about_blank": false, 
@@ -34,7 +34,7 @@
    },
 
     "action": {
-      "default_popup": "website.html",
+      "default_popup": "budget.html",
       "default_icon":  "smilingchibidollar.png"
     }   
 

@@ -2,11 +2,10 @@
 <html>
 <head>
     <title>Checkout Popup</title>
-    <script src="content.js" type="module" defer></script>
+    <script src="popup.js" type="module" defer></script>
     <link rel="stylesheet" href="config.css">
     <style>
         body {
-            height: 300px;
             width: 200px;
         }
     </style>
@@ -19,9 +18,8 @@
     <h2 class="Question">This purchase is <span id="budgetPercent">x%</span> of your budget and <span id="remainingPercent">x%</span> of your remaining budget for the month!</h2>
     <h3>Do you wish to Proceed?</h3>
     <h3>Budget: <span id="budgetDisplay">---</span></h3>
-    <h3>Remaining Budget: <span id="remainingDisplay">---</span></h3>
+    <h3>Remaining Budget After Purchase: <span id="remainingDisplay">---</span></h3>
     <h2>Total Price: <span id="totalDisplay">---</span></h2>
-    <button id="wrongPrice" value="wrongPrice">Wrong Price</button>
     <button id="confirm" value="confirm">Confirm</button>
     
 </body>
