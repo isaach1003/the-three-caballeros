@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
       display.innerText = budget ? `$${budget}` : '---';
   });
 });
-//test  
+//test
 document.getElementById('budget').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     getInput();

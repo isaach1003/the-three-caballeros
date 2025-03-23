@@ -30,6 +30,8 @@ function checkForCheckout() {
     }
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     chrome.storage.local.get(['budget'], (result) => {
         budget = result.budget || '0';
@@ -44,8 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
             //console.log('Performing: ' + totalPrice + "/" + data.budget);
             budgetPercent.innerText =  ((totalPrice/budget)*100).toFixed(2) + '%';
             totalDisplay.innerText = totalPrice ? `$${totalPrice}` : 'Price not found';
-            remainingDisplay.innerText = '$'+(budget - totalPrice).toFixed(2);
-            budgetDisplay.innerText = '$'+result.budget || '$0';
+            const remaining = (budget - totalPrice).toFixed(2)
+            remainingDisplay.innerText = '$' + remaining;
+            if(remaining < 0){
+                aboveWarning.innerText = 'Warning: You are going over budget!';
+            }
+            budgetDisplay.innerText = '$'+(result.budget) || '$0';
             chrome.storage.local.set({ totalPrice: null });
         });
     });

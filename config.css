@@ -18,7 +18,10 @@ button{
   border-style: dashed;
   cursor: pointer;
 }
-
+.Warning{
+  color: darkred;
+  font-weight: bold;
+}
 textarea{
 width: 100px;
 background-color: #d6e7d4;
