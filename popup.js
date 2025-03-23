@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
             //console.log('Performing: ' + totalPrice + "/" + data.budget);
-            budgetPercent.innerText =  ((totalPrice/budget)*100).toFixed(2) + '%';
             totalDisplay.innerText = totalPrice ? `$${totalPrice}` : 'Price not found';
             
             budgetDisplay.innerText = '$'+(result.budget) || '$0';
