@@ -3,8 +3,6 @@ header{
   text-align: center;
 }
 body{
-  height: 200px;
-  width: 200px;
 border: #74bf6d;
 border-style: dashed;
 background-color: #aedc9c ;
@@ -13,8 +11,7 @@ color: #2f6e2c;
 text-align: left;
 padding: 10px;
 }
-.money{
-  align-items: center;
+button{
   background-color: #d6e7d4;
   border: #74bf6d;
   color:#2f6e2c;
@@ -22,7 +19,7 @@ padding: 10px;
   cursor: pointer;
 }
 
-textArea{
+textarea{
 width: 100px;
 background-color: #d6e7d4;
 border: #74bf6d;

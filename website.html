@@ -4,6 +4,12 @@
     <title>Budget Tracker</title>
     <script src="popup.js" type="module" defer></script>
     <link rel="stylesheet" href="config.css">
+    <style>
+        body {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
     
 </head>
 <header>
@@ -14,7 +20,7 @@
     <h3>Set monthly budget</h3>
     <textarea id="budget" name="budget" rows="1" placeholder="Ex: 100"></textarea>
     <br>
-    <input class="money" type="button" id="save" value="Submit">  
+    <button id="save" value="Submit">Submit</button>
     <p id="message"></p>    
 </body>
 </html>
