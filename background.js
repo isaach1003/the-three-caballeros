@@ -5,3 +5,12 @@ chrome.runtime.onMessage.addListener(
         }
     }
 );
+
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        if (request.action === "changePopup") {
+            chrome.action.setPopup({popup: "popup.html"});
+        }
+    }
+);
+
